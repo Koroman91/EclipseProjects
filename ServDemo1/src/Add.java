@@ -13,7 +13,20 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(urlPatterns={"/Add"})
 public class Add extends HttpServlet  {
 
-   public void service(HttpServletRequest req, HttpServletResponse res) throws IOException
+   public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException
+   {
+	   
+	   processRequest(req,res);
+	   
+	   
+   }
+   public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException
+   {
+	   
+        processRequest(req,res);
+	   
+   }
+   public void processRequest(HttpServletRequest req, HttpServletResponse res) throws IOException
    {
 	   
 	   int i = Integer.parseInt(req.getParameter("t1"));
